@@ -1,5 +1,5 @@
 <div class='container'>
-<h2>Angular 2 Forms</h2>
+<h2>Employee Forms</h2>
     <form #form="ngForm" novalidate>
         <div class='form-group'>
             <label>First Name</label>
@@ -8,7 +8,13 @@
         <div class='form-group'>
                 <label>Last Name</label>
                 <input type="text" required class='form-control' placeholder="Name" name="lasttName" ngModel/>
-            </div>
+        </div>
+
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" name="is-full-time" ngModel>Full Time Employee
+            </label>
+        </div>
         <button class='btn btn-primary' type="submit">Ok</button>
     </form>
 </div>
