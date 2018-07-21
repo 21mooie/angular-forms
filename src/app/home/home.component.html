@@ -3,23 +3,23 @@
     <form #form="ngForm" novalidate>
         <div class='form-group'>
             <label>First Name</label>
-            <input type="text" required class='form-control' placeholder="Name" name="firstName" [ngModel]='model.firstName'
-            (ngModelChange) = 'model.firstName=$event'/>
+            <input type="text" required class='form-control' placeholder="Name" name="firstName" [(ngModel)]='model.firstName'/>
         </div>
-        Model: {{ model | json}}
-        <br/>
-        Angular: {{ form.value | json}}
-        <!-- <div class='form-group'>
+    
+        <div class='form-group'>
                 <label>Last Name</label>
-                <input type="text" required class='form-control' placeholder="Name" name="lasttName" ngModel/>
+                <input type="text" required class='form-control' placeholder="Name" name="lasttName" [(ngModel)]=model.lastName/>
         </div>
 
         <div class="checkbox">
             <label>
-                <input type="checkbox" name="is-full-time" ngModel>Full Time Employee
+                <input type="checkbox" name="is-full-time" [(ngModel)]='model.isFullTime'>Full Time Employee
             </label>
         </div>
-
+        Model: {{ model | json}}
+        <br>
+        Angular: {{ form.value | json}}
+        <!--
         <label>Payment Type</label>
         <div class="radio">
             <label>
