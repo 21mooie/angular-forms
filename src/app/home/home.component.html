@@ -8,7 +8,7 @@
     
         <div class='form-group'>
                 <label>Last Name</label>
-                <input type="text" required class='form-control' placeholder="Name" name="lasttName" [(ngModel)]=model.lastName/>
+                <input type="text" required class='form-control' placeholder="Name" name="lastName" [(ngModel)]=model.lastName/>
         </div>
 
         <div class="checkbox">
@@ -19,23 +19,27 @@
         Model: {{ model | json}}
         <br>
         Angular: {{ form.value | json}}
-        <!--
+        
         <label>Payment Type</label>
         <div class="radio">
             <label>
-                <input type="radio" name="pay-type" value="w2">W2
+                <input type="radio" name="pay-type" value="w2"
+                [(ngModel)]='model.paymentType'>W2
             </label>
         </div>
 
         <div class="radio">
             <label>
-                <input type="radio" name="pay-type" value="1099">1099
+                <input type="radio" name="pay-type" value="1099"
+                [(ngModel)]='model.paymentType'>1099
             </label>
         </div>
 
         <div class='form-group'>
             <label>Primary Language</label>
-            <select class='form-control'>
+            <select class='form-control'
+                    name='primaryLanguage'
+                    [(ngModel)]='model.primaryLanguage'>
                 <option *ngFor='let lang of languages'>
                     {{lang}}
                 </option>
@@ -50,4 +54,4 @@
         <button class='btn btn-primary' type="submit">Ok</button>
     </form>
 </div>
- -->
+
