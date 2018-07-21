@@ -3,8 +3,12 @@
     <form #form="ngForm" novalidate>
         <div class='form-group'>
             <label>First Name</label>
-            <input type="text" required class='form-control' placeholder="Name" name="firstName" ngModel/>
+            <input type="text" required class='form-control' placeholder="Name" name="firstName" [ngModel]='model.firstName'
+            (ngModelChange) = 'model.firstName=$event'/>
         </div>
+        Model: {{ model | json}}
+        <br/>
+        Angular: {{ form.value | json}}
         <!-- <div class='form-group'>
                 <label>Last Name</label>
                 <input type="text" required class='form-control' placeholder="Name" name="lasttName" ngModel/>
