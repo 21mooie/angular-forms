@@ -42,7 +42,9 @@
             <label class='control-label'>Primary Language</label>
             <select class='form-control'
                     name='primaryLanguage'
-                    (blur)='validatePrimaryLanguage()'
+                    #primarylanguage
+                    (blur)='validatePrimaryLanguage(primarylanguage.value)'
+                    (change)='validatePrimaryLanguage(primarylanguage.value)'
                     [(ngModel)]='model.primaryLanguage'>
                 <option value='default'> Select a language ...</option>
                 <option *ngFor='let lang of languages'>

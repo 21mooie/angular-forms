@@ -11,9 +11,8 @@ export class HomeComponent {
   model = new Employee('', 'Smith', true,'w2','default');
   hasPrimaryLanguageError : boolean = false;
 
-  validatePrimaryLanguage(event){
-    console.log('here');
-    if (this.model.primaryLanguage === 'default')
+  validatePrimaryLanguage(value){
+    if (value === 'default')
       this.hasPrimaryLanguageError = true;
     else 
       this.hasPrimaryLanguageError = false;
