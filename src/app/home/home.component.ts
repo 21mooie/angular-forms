@@ -8,6 +8,6 @@ import { Employee } from '../models/employee.model';
 })
 export class HomeComponent {
   languages : string[] = ['English', 'Spanish', 'Other'];
-  model = new Employee('Darla', 'Smith', true,'w2','English');
+  model = new Employee('', 'Smith', true,'w2','English');
 
 }
