@@ -1,14 +1,14 @@
 <div class='container'>
 <h2>Employee Forms</h2>
     <form #form="ngForm" novalidate>
-        <!-- <div class='form-group' [class.has-error]='firstname.invalid && firstname.touched'>
+        <div class='form-group' [class.has-error]='firstname.invalid && firstname.touched'>
             <label class='control-label'>First Name</label>
             <input #firstname='ngModel' pattern='...+' type="text" required class='form-control' placeholder="Name" name="firstName" [(ngModel)]='model.firstName'/>
         
             <div *ngIf='firstname.invalid && firstname.touched' class='alert alert-danger'>
                 First Name is required and must be atleast 3 characters
             </div>
-        </div> -->
+        </div>
         <!-- <div class='form-group'>
                 <label>Last Name</label>
                 <input type="text" required class='form-control' placeholder="Name" name="lastName" [(ngModel)]=model.lastName/>
@@ -38,7 +38,7 @@
             </label>
         </div>
     -->
-        <div class='form-group' [class.has-error]='hasPrimaryLanguageError'>
+        <!-- <div class='form-group' [class.has-error]='hasPrimaryLanguageError'>
             <label class='control-label'>Primary Language</label>
             <select class='form-control'
                     name='primaryLanguage'
@@ -56,9 +56,13 @@
         <div class='form-group'>
             <label for="">Date Hired</label>
             <input type="date" class='form-control'>
-        </div>
+        </div> -->
 
-        <button class='btn btn-primary' type="submit">Ok</button> 
+        <button class='btn btn-primary' 
+                type="submit"
+                [disabled]='form.invalid'>Ok</button> 
+
+        {{ form.valid }}
     </form>
 </div>
 
